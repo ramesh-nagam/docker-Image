@@ -1,9 +1,9 @@
 FROM node:14.19.0 as node
-WORKDIR /app
-COPY . .
+WORKDIR /usr/src/app
+COPY package.json .
+COPY package-lock.json .
+
 RUN npm install
-RUN npm run build --prod
+COPY ..
 
-FROM nginx:latest
-COPY --from=node /DCAR_Algo_Server/dist/dcar-algo-server/usr/share/nginx/html
-
+CMD /usr/src/app/node_modules/.bin/ng serve --host 0.0.0.0 --disableHostCheck
