@@ -1,5 +1,11 @@
-FROM nginx:1.17.1-alpine
-COPY /dist/DCAR_Algo_Server /usr/share/nginx/html
-#Copy default nginx configuration
-COPY ./nginx.conf /etc/nginx/conf.d/default.conf
+FROM node:14.19.0 as node
+WORKDIR /app
+
+
+COPY package.json
+COPY . .
+RUN  npm install   
+RUN npm run build
 EXPOSE 4200
+
+CMD npm start
