@@ -1,13 +1,11 @@
-FROM node:latest
+FROM node:14.19.0 as node
 WORKDIR /app
-
 
 
 COPY package.json package-lock.json
 COPY . .
 RUN npm install 
+RUN npm run build
 EXPOSE 4200
 
-
-
-CMD ["ng", "serve", "--host", "0.0.0.0"]
+CMD npm start
