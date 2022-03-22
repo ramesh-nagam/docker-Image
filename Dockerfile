@@ -1,9 +1,14 @@
-FROM node:14.19.0 as node
-WORKDIR /usr/src/app
-COPY package.json .
-COPY package-lock.json .
+FROM node:latest
+WORKDIR /app
 
-RUN npm install
+
+
+COPY package.json package-lock.json
 COPY . .
+RUN npm install
+RUN npm install -g @angular/cli
+EXPOSE 4200
 
-CMD /usr/src/app/node_modules/.bin/ng serve --host 0.0.0.0 --disableHostCheck
+
+
+CMD ["ng", "serve", "--host", "0.0.0.0"]
