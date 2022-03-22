@@ -2,7 +2,7 @@ FROM node:14.19.0 as node
 WORKDIR /app
 
 
-COPY package.json
+COPY package.json package-lock.json
 COPY . .
 RUN  npm install   
 RUN npm run build
