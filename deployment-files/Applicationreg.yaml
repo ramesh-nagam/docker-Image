@@ -1,0 +1,14 @@
+apiVersion: ees.ge.com/v1
+kind: ApplicationRegistration
+metadata:
+  name: dcar
+  namespace: dcar
+spec:
+  appName: "dcar"
+  displayName: "dcar"
+  description: "dcar"
+  callbackUrls:
+    - "http://localhost:4200/home"
+  grantTypes:
+    - authorization_code
+    - implicit
