@@ -2,12 +2,14 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './features/login/login.component';
-import { HomeComponent } from './features/home/home.component';
-import{RegisterComponent} from './features/register/register.component'
+
+import { UserManagementComponent } from './features/user-management/user-management.component';
+import {AlgoDeploymentComponent} from './features/algo-deployment/algo-deployment.component'
 const routes: Routes = [
  { path : 'login', component: LoginComponent },
-  { path: 'home', component: HomeComponent },
-  {path : 'register', component:RegisterComponent},
+  {path: 'user-management', component: UserManagementComponent},
+  {path: 'algo-deployment', component: AlgoDeploymentComponent},
+  
   { path : '**', redirectTo:'login'}
 ];
 

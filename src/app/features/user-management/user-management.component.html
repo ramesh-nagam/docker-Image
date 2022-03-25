@@ -1,0 +1,51 @@
+<router-outlet></router-outlet>
+
+<mat-toolbar>
+    <mat-toolbar-row style="height: 3vw; background-color: #144b74;">
+
+        <p id="heading"> DCAR Algorithm Service Portal </p>
+        <a class="link1" routerLink="/algo-deployment" onmouseout="this.style.textDecoration = 'none'" onmouseover="this.style.textDecoration = 'underline'"> Algorithm Deployment </a>
+        <a class="link2" routerLink="/service" onmouseout="this.style.textDecoration = 'none'" onmouseover="this.style.textDecoration = 'underline'"> Service </a>
+        <a class="link3" routerLink="/billing" onmouseout="this.style.textDecoration = 'none'" onmouseover="this.style.textDecoration = 'underline'"> Billing </a>
+
+        <mat-icon style="color: white; margin-left: 72vw; margin-top: 26px; font-size: 16px;"> lock </mat-icon>
+        <a class="link4" routerLink="/login" onmouseout="this.style.textDecoration = 'none'" onmouseover="this.style.textDecoration = 'underline'"> Logout </a>
+
+    </mat-toolbar-row>
+
+    <mat-toolbar-row style="margin-top: 4px; margin-left: 1vw; width: 99vw; height: 3vw; background-color: #dce0e3;">
+
+        <p style="margin-left: 46vw; font-size: small; margin-left: 45vw; margin-top: 1vw; font-size: small;"> 
+            User Management </p>
+        <mat-icon style="margin-left: -9vw">group</mat-icon>
+
+    </mat-toolbar-row>
+
+</mat-toolbar>
+
+
+<app-userslist></app-userslist>
+
+
+<div class="card" style="background-color: #f8f5f5; width: 15vw; margin-top: -45vw; height: 703px;">
+
+    <label style="margin-top: 0vw; height: 3vw; border-color: #dce0e3; background-color: #dce0e3;">
+        <mat-icon style="margin-top: 16px; margin-left: 65px; font-size: 17px;"> home</mat-icon> 
+        <p style="margin-top: -25px; font-size: 14px; margin-left: 94px;"> Home </p>
+    </label> 
+    <mat-icon style="margin-top: -30px; margin-left: 192px; font-size: 17px;">menu</mat-icon>
+
+    <button mat-button id="btn1" (click)="openDialog()"> 
+        <mat-icon style="color: rgb(69, 94, 117)"> group_add </mat-icon> 
+    </button>
+
+    <button id="btn2"> 
+        <mat-icon style="color: rgb(69, 94, 117)"> edit </mat-icon> 
+    </button>
+
+    <button id="btn3"> 
+        <mat-icon style="color: rgb(69, 94, 117)"> block </mat-icon> 
+        <mat-icon style="color: rgb(69, 94, 117); margin-left: -24px; font-size: 21px;"> person_outline </mat-icon>
+    </button>
+
+</div>

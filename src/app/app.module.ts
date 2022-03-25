@@ -1,13 +1,22 @@
-import { NgModule , APP_INITIALIZER} from '@angular/core';
+import { NgModule , APP_INITIALIZER, NO_ERRORS_SCHEMA, CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatIconModule} from '@angular/material/icon';
+import { FormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; 
 import { AppComponent } from './app.component';
 import { LoginComponent } from './features/login/login.component';
 import { AppConfigService } from './app-config.service';
 import { OAuthModule } from 'angular-oauth2-oidc';
-import { HomeComponent } from './features/home/home.component';
-import { RegisterComponent } from './features/register/register.component';
+import { RouterModule } from '@angular/router';
+import { UserManagementComponent } from './features/user-management/user-management.component';
+import { UserslistComponent } from './features/userslist/userslist.component';
+import { AlgoDeploymentComponent } from './features/algo-deployment/algo-deployment.component';
+import {MatDialogModule} from '@angular/material/dialog';
+import { AddUserComponent } from './features/add-user/add-user.component';
+
 
 const appInitializerFn = (appConfig: AppConfigService) => {
   return () => {
@@ -19,21 +28,30 @@ const appInitializerFn = (appConfig: AppConfigService) => {
 @NgModule({
   declarations: [
     AppComponent,
-  
+    UserManagementComponent,
+    UserslistComponent,
+    AlgoDeploymentComponent,
+    AddUserComponent,
     LoginComponent,
-        HomeComponent,
-        RegisterComponent,
+   
+      
     
    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-   
-  
+    BrowserAnimationsModule,
+    MatToolbarModule,
+    MatIconModule,
+    FormsModule,
+    MatDialogModule,
+    RouterModule,
     HttpClientModule,
     OAuthModule.forRoot()
-      ],
+  ],
+  
+  schemas: [CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA],
   exports: [],
   providers: [
     AppConfigService,
