@@ -1,22 +1,58 @@
 <mat-toolbar class="toolbar">
     <mat-toolbar-row style="background-color: #144b74">
         <mat-icon style="color: white; margin-left: 20vw;">people</mat-icon>
-        <span style="color: white; font-size: 13px; margin-left: 1vw;">Add New Users</span>
+        <span style="color: white; font-size: 13px;direction:row; align-items:center">Add New User</span>
     </mat-toolbar-row>
 </mat-toolbar>
 <hr style="margin-top: 4px; width: 107%; margin-left: -2vw;">
-<div style="background-color: #d4d4d4; height: 2vw;">
-    <span style="font-size: 13px; margin-left: 1vw; color: #385c7e;"> <b> Demographic Details </b></span>
+<div style="background-color: #d4d4d4; height: 3vw; width:100%;border-radius: 5px;">
+    <span style="font-size: 13px; color: #385c7e;margin-left: 10px;"> <b > Demographic Details </b></span>
 </div>
 
-<div class="card" style="margin-top: 2vw; box-shadow:1px 1px 30px rgb(213, 219, 221);height: 21vw;">
-
+<div class="card container-fluid" style="margin-top: 0.5vw; box-shadow:1px 1px 30px rgb(213, 219, 221);height: 21vw;">
+<div class="row">
+    <div class="col-md-6">
     <div class="input-icons">
         <label style="font-size: small; font-weight: bold; color: #356294; margin-left: 2vw; margin-top: 3vw;">Username:</label>
         &nbsp;&nbsp;
         <i class="fa fa-user icon"></i> &nbsp;
         <input class="input-field" type="text" placeholder="Enter username" style="border-color: rgb(175, 164, 164);">
     </div>
+    <div>
+         <div class="input-icons">
+        <label style="font-size: small; font-weight: bold; color: #356294; ; margin-top: 3vw;">Contact Number:</label>
+        &nbsp;&nbsp;
+        <i class="fa fa-phone"></i> &nbsp;
+        <input class="input-field" type="text" placeholder="Enter username" style="border-color: rgb(175, 164, 164);">
+    </div>
+    </div>
+</div>
+<div class="col-md-6">
+    <div class="input-icons">
+        <label style="font-size: small; font-weight: bold; color: #356294; margin-top: 3vw;">Provider Name:</label>
+        &nbsp;&nbsp;
+        <i class="fa fa-user icon"></i> &nbsp;
+        <input class="input-field" type="text" placeholder="Enter username" style="border-color: rgb(175, 164, 164);">
+        </div>
+
+        <div>
+            <div class="input-icons">
+           <label style="font-size: small; font-weight: bold; color: #356294; margin-left: 2vw; margin-top: 3vw;">Email ID:</label>
+           &nbsp;&nbsp;
+           <i class="fa fa-envelope"></i> &nbsp;
+           <input class="input-field" type="email" placeholder="Enter username" style="border-color: rgb(175, 164, 164);">
+       </div>
+       </div>
+      
+</div>
 
 </div>
+<div style="float:right">
+<button mat-fab color="primary" style="float:right;margin-top:50px">
+    <mat-icon>+</mat-icon>
+  </button>
+  </div>
+</div>
+
+
 
