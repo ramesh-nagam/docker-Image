@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
 import {MatDialog} from '@angular/material/dialog';
 import { AddUserComponent } from '../add-user/add-user.component';
+import { DeauthorizeUserComponent } from '../deauthorize-user/deauthorize-user.component';
+import { EditUserComponent } from '../edit-user/edit-user.component';
 
 @Component({
   selector: 'app-user-management',
@@ -15,17 +16,26 @@ export class UserManagementComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  openDialog() {
+/* Side-button Functionality */
+  openAddUser() {
       this.dialog.open(AddUserComponent, {
       width: '800px',
       height: '500px'
     });
   }
 
-  searchValue: string = '';
- /* onSubmit($event)
-  {
+  openEditUser() {
+    this.dialog.open(EditUserComponent, {
+      width: '800px',
+      height: '500px'
+    });
+  }
 
-  }*/
+  openDeauthorizeUser() {
+    this.dialog.open(DeauthorizeUserComponent, {
+      width: '700px',
+      height: '400px'
+    });
+  }
 
 }
