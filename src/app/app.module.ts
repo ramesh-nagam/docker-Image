@@ -16,6 +16,9 @@ import { UserslistComponent } from './features/userslist/userslist.component';
 import { AlgoDeploymentComponent } from './features/algo-deployment/algo-deployment.component';
 import {MatDialogModule} from '@angular/material/dialog';
 import { AddUserComponent } from './features/add-user/add-user.component';
+import { EditUserComponent } from './features/edit-user/edit-user.component';
+import { DeauthorizeUserComponent } from './features/deauthorize-user/deauthorize-user.component';
+import { DeleteUserComponent } from './features/delete-user/delete-user.component';
 
 
 const appInitializerFn = (appConfig: AppConfigService) => {
@@ -33,6 +36,9 @@ const appInitializerFn = (appConfig: AppConfigService) => {
     AlgoDeploymentComponent,
     AddUserComponent,
     LoginComponent,
+    EditUserComponent,
+    DeauthorizeUserComponent,
+    DeleteUserComponent,
    
       
     

@@ -35,15 +35,15 @@
     </label> 
     <mat-icon style="margin-top: -30px; margin-left: 192px; font-size: 17px;">menu</mat-icon>
 
-    <button mat-button id="btn1" (click)="openDialog()"> 
+    <button id="btn1" (click)="openAddUser()"> 
         <mat-icon style="color: rgb(69, 94, 117)"> group_add </mat-icon> 
     </button>
 
-    <button id="btn2"> 
+    <button id="btn2" (click)="openEditUser()"> 
         <mat-icon style="color: rgb(69, 94, 117)"> edit </mat-icon> 
     </button>
 
-    <button id="btn3"> 
+    <button id="btn3" (click)="openDeauthorizeUser()"> 
         <mat-icon style="color: rgb(69, 94, 117)"> block </mat-icon> 
         <mat-icon style="color: rgb(69, 94, 117); margin-left: -24px; font-size: 21px;"> person_outline </mat-icon>
     </button>
