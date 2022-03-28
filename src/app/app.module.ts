@@ -19,7 +19,7 @@ import { AddUserComponent } from './features/add-user/add-user.component';
 import { EditUserComponent } from './features/edit-user/edit-user.component';
 import { DeauthorizeUserComponent } from './features/deauthorize-user/deauthorize-user.component';
 import { DeleteUserComponent } from './features/delete-user/delete-user.component';
-
+import {MatButtonModule} from '@angular/material/button';
 
 const appInitializerFn = (appConfig: AppConfigService) => {
   return () => {
@@ -50,6 +50,7 @@ const appInitializerFn = (appConfig: AppConfigService) => {
     BrowserAnimationsModule,
     MatToolbarModule,
     MatIconModule,
+    MatButtonModule,
     FormsModule,
     MatDialogModule,
     RouterModule,
