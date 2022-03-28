@@ -19,12 +19,12 @@ box-shadow: 0 0 30px rgb(238, 238, 238); border-radius: 1.25rem;">
                 <hr>
             </div>
             
-            <li >
+            <li>
                 
                 <input type="checkbox" >
                 <mat-icon class="profile-icon">account_circle</mat-icon>
                 <button class="license-btn"><mat-icon style="color: rgb(95, 115, 139);">description</mat-icon></button>
-                <button class="delete-btn"> <mat-icon style="color: rgb(155, 0, 0);"> delete </mat-icon> </button>
+                <button class="delete-btn" (click)="openDeleteUser()"> <mat-icon style="color: rgb(155, 0, 0);"> delete </mat-icon> </button>
                 <hr>
 
             <!-- <input type="checkbox" [(ngModel)]="item.checked" (change)="changeCheckbox($event)">{{ item.users }}

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { DeleteUserComponent } from '../delete-user/delete-user.component';
 
 @Component({
   selector: 'app-userslist',
@@ -7,11 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UserslistComponent implements OnInit {
 
-  constructor() { }
+  constructor(public dialog: MatDialog) { }
 
   ngOnInit(): void {
   }
 
+
+  openDeleteUser() {
+    this.dialog.open(DeleteUserComponent, {
+      width: '800px',
+      height: '500px'
+    });
+  }
   searchValue: string='';
   pageSize: any;
   /*
